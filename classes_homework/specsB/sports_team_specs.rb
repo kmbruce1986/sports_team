@@ -6,7 +6,7 @@ require_relative("../sports_team.rb")
 class TestSportsTeam < MiniTest::Test
 
 def setup()
-  @team = Team.new("Gryfindor", ["Harry", "Ron", "Ginny", "Angelica", "George", "Fred", "Oliver"], "Oliver", 0)
+  @team = Team.new("Gryfindor", ["Harry", "Ron", "Ginny", "Angelica", "George", "Fred", "Oliver"], "Oliver", 0, "lose")
 end
 
 def test_get_team_name
@@ -36,5 +36,16 @@ def test_player_on_team
   result = @team.player_on_team("Harry")
   assert_equal(true, result)
 end
+
+def test_points
+  @team.points()
+  assert_equal(0, @team.points)
+end
+
+# def test_points
+# @team.points()
+# assert_equal(0, @team.points)
+# end
+
 
 end
