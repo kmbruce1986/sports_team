@@ -27,4 +27,9 @@ def test_update_coach
   assert_equal("Percy", @team.coach)
 end
 
+# def test_add_new_player
+#   @team.add_new_player = "Hermione"
+#   assert_equal(8, @team.players.count())
+# end
+
 end
